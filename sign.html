@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="5" style="border-style: outset;color:crimson;" cellspacing="4" cellpadding="5" align="center">
+        <tr>
+            <th colspan="2" style="background-color: lightyellow; color:red;" align="center"><b>SignUp Form</b></th>
+        </tr>
+        <tr>
+            <td style="background-color: aqua;">Email:</td>
+            <td style="background-color: aqua;"><input type="email"></td>
+        </tr>
+        <tr>
+            <td style="background-color: aqua;">Password:</td>
+            <td style="background-color: aqua;"><input type="password" id="pass"></td>
+        </tr>
+        <tr style="background-color: aqua;">
+            <td colspan="2">
+                <!-- <form> -->
+                    <input type="reset" value="Reset">
+                    <input type="submit">
+                <!-- </form> -->
+        </tr>
+    </table>
+    <script>
+        const pass=document.getElementById("pass");
+        pass.addEventListener("change",checkpass)
+        function checkpass()
+        {
+            let val=pass.value;
+            let regex=/.*[A-Z]+[0-9]+\W{1}/
+            if(regex.test(val))
+            {
+                console.log("Success");
+            }
+            else
+            alert("alert");
+        }
+    </script>
+</body>
+</html>
